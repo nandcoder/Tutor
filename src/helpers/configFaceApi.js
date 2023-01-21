@@ -1,7 +1,7 @@
 import * as faceapi from 'face-api.js';
 
 export const loadModels = () => {
-  const MODEL_URL = `http://localhost:3000/models`;
+  const MODEL_URL = `${process.env.PUBLIC_URL}/models`;
   console.log(MODEL_URL);
 
   return Promise.all([
