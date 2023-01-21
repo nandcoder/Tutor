@@ -16,8 +16,8 @@ const Contact = () => {
         body.append("name", data.name);
         body.append("email", data.email);
         body.append("query", data.query);
-
-        fetch(`https://reqres.in/api/users`, {
+        const URL = `https://reqres.in/api/users`;
+        fetch(URL, {
 
             method: 'POST',
             mode: 'cors',
