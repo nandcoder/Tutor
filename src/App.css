@@ -14,6 +14,20 @@
   position: relative;
 }
 
+.camera video {
+  border: 3px solid #fff;
+  border-radius: 3px;
+}
+
+.webcam-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.webcam-overlay--hidden {
+  display: none;
+}
 
 .results {
   font-size: 1.25rem;
@@ -25,5 +39,9 @@
   justify-content: center;
   align-items: center;
   
+}
+
+.form-style{
+  display: flex;
 }
 

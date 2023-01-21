@@ -6,7 +6,7 @@ import Results from './Results';
 import Webcam from 'react-webcam';
 
 
-const Camera = () => {
+const Camera = ({ page }) => {
   const camera = useRef();
   const cameraCanvas = useRef();
 
@@ -34,14 +34,14 @@ const Camera = () => {
         clearInterval(ticking);
       };
     } else {
-      return clearOverlay(cameraCanvas);
+      return;
     }
-  }, []);
-
+  }, [page]);
 
   return (
-    <div >
-      <Webcam className="camera rounded" audio={false} ref={camera} width="100%" height="auto" />
+    <div className="camera">
+      <Webcam className='rounded' audio={false} ref={camera} width="100%" height="auto" />
+      <canvas className='webcam-overlay' ref={cameraCanvas} />
       <Results results={results} />
     </div>
   );

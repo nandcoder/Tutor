@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar setPage={setPage} />
-      {page === 'Home' && <Grid />}
+      {page === 'Home' && <Grid page={page} />}
       {page === 'Contact' && <Contact />}
     </div>
   );
